@@ -1,0 +1,33 @@
+{
+  "build": {
+    "core": "netx90_app",
+    "cpu": "netx90",
+    "mcu": "netx",
+    "buildMode" : "debug",
+    "warninglevel1" : "false",
+    "__STACK_SIZE": "0x00002000",
+    "__HEAP_SIZE": "0x00002000",
+    "__START": "main"
+  },
+  "debug": {
+    "jlink_device": "netX90_app",
+    "openocd_interface": "hilscher_nxhx90_jtag_onboard",
+    "openocd_board": "hilscher_netx90",
+    "svd": "regdef_netx90_arm_app.svd"
+  },
+  "frameworks": [
+    "cmsis"
+  ],
+  "name": "NXHX-90-RE",
+  "upload": {
+    "maximum_ram_size": 65536,
+    "maximum_size": 524288,
+    "protocol": "hilscher",
+    "protocols": [
+      "hilscher",
+      "jlink"
+    ]
+  },
+  "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f103t6.html",
+  "vendor": "Hilscher"
+}

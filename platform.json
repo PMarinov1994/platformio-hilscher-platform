@@ -1,0 +1,66 @@
+{
+  "name": "Hilscher",
+  "title": "Hilscher Platform",
+  "description": "My custom development platform",
+  "homepage": "https://mycompany.com",
+  "license": "Apache-2.0",
+  "keywords": ["netX", "Hilscher"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/platformio/platform-myplatform.git"
+  },
+  "version": "0.0.0",
+  "frameworks": {
+    "cmsis": {
+      "package": "framework-cmsis",
+      "script": "builder/frameworks/cmsis.py",
+      "description": "The ARM Cortex Microcontroller Software Interface Standard (CMSIS) is a vendor-independent hardware abstraction layer for the Cortex-M processor series and specifies debugger interfaces. The CMSIS enables consistent and simple software interfaces to the processor for interface peripherals, real-time operating systems, and middleware. It simplifies software re-use, reducing the learning curve for new microcontroller developers and cutting the time-to-market for devices",
+      "homepage": "https://developer.arm.com/tools-and-software/embedded/cmsis",
+      "title": "CMSIS"
+    }
+  },
+  "packages": {
+    "toolchain-gccarmnoneeabi": {
+      "type": "toolchain",
+      "owner": "platformio",
+      "version": "1.90301.200702"
+    },
+    "framework-cmsis": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~1.40500.0",
+      "optionalVersions": [
+        "~2.50400.0"
+      ]
+    },
+    "framework-cmsis-netx": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio"
+    },
+    "tool-hilscher-cli-flasher" : {
+      "type": "uploader",
+      "optional": true,
+      "owner": "platformio",
+      "version": "2.1100.211028"
+    },
+    "tool-hboot_image_update_header" : {
+      "type": "toolchain",
+      "owner": "platformio",
+      "version" : "2.1100.211028"
+    },
+    "tool-hil_nxt_hboot_image_compiler": {
+      "optional": true,
+      "type": "toolchain",
+      "owner": "platformio",
+      "version": "0.2.0"
+    },
+    "tool-openocd": {
+      "type": "uploader",
+      "optional": true,
+      "owner": "platformio",
+      "version": "~2.1100.0"
+    }
+  }
+}
