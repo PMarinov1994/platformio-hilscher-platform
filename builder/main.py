@@ -49,7 +49,6 @@ fmw_extension = ".bin"
 if cpu == "netx90":
     fmw_extension = ".nai"
 
-hboot_image_update_header = platform.get_package_dir("tool-hboot_image_update_header")
 hboot_image_compiler = platform.get_package_dir("tool-hil_nxt_hboot_image_compiler")
 
 env.Append(
@@ -67,15 +66,6 @@ env.Append(
                 "$SOURCES",
                 "$TARGET"
             ]), "Building $TARGET"),
-            suffix=fmw_extension
-        ),
-        BinToNai=Builder(
-            action=env.VerboseAction(" ".join([
-                join(hboot_image_update_header, "hboot_image_update_header.exe"),
-                "$SOURCES",
-                "-o",
-                "$TARGET"                
-            ]), "Updating headers"),
             suffix=fmw_extension
         ),
         ElfToNai=Builder(

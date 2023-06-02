@@ -45,11 +45,6 @@
       "owner": "platformio",
       "version": "2.1100.211028"
     },
-    "tool-hboot_image_update_header" : {
-      "type": "toolchain",
-      "owner": "platformio",
-      "version" : "2.1100.211028"
-    },
     "tool-hil_nxt_hboot_image_compiler": {
       "optional": true,
       "type": "toolchain",
