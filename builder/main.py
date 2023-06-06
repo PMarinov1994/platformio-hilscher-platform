@@ -58,11 +58,6 @@ env.Append(
                 "$OBJCOPY",
                 "-O",
                 "binary",
-                "--only-section=.text.nai_header",
-                "--only-section=.text.pagereader",
-                "--only-section=.text.pageflasher",
-                "--only-section=.text",
-                "--only-section=.data",
                 "$SOURCES",
                 "$TARGET"
             ]), "Building $TARGET"),
